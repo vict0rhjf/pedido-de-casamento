@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedido de Namoro</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: rgb(255, 216, 254);
+    }
+    #container {
+        margin-top: 100px;
+    }
+    #simButton {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+    #naoButton {
+        background-color: #f44336;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+</style>
+</head>
+<body>
+<div id="container">
+    <h2>Casa comigo pepexinha?</h2>
+    <button id="simButton">Sim</button>
+    <button id="naoButton">Não</button>
+</div>
+
+<script>
+    const simButton = document.getElementById('simButton');
+    const naoButton = document.getElementById('naoButton');
+
+    naoButton.addEventListener('click', () => {
+        const randomLeft = Math.floor(Math.random() * 75);
+        const randomTop = Math.floor(Math.random() * 75);
+        naoButton.style.position = 'absolute';
+        naoButton.style.left = randomLeft + '%';
+        naoButton.style.top = randomTop + '%';
+    });
+
+    simButton.addEventListener('click', () => {
+        window.location.href = "https://www.youtube.com/watch?v=rTsbSY04s1Y";
+    });
+</script>
+</body>
+</html>
